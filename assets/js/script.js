@@ -19,9 +19,11 @@ $(document).ready(function () {
             var Time = parseInt($(this).attr("id").split("hour")[1]);
 
             if (Time < currentTIme) {
-                $(this).removeClass("future");
+                // $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
+
+                document.getElementById("future").style.display = "none";
                
             }
             else if (Time === currentTIme) {           
@@ -55,7 +57,7 @@ $(document).ready(function () {
     currTime();
 })
 
-// added a button to the page to clear the time blocks
+// added a button to the page to clear the local storage and the time blocks
 function clearLocal() {
   localStorage.clear();
 

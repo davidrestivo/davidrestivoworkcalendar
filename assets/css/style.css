@@ -4,6 +4,11 @@ body {
   line-height: 1;
 }
 
+#allRows {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
 textarea {
   background: transparent;
   border: none;
@@ -27,6 +32,7 @@ textarea {
   border-radius: 15px;
   margin-bottom: 25px;
   margin-left: 25px;
+  box-shadow: 3px 4px 3px 0px rgba(0,0,0,1);
 }
 
 .description {
