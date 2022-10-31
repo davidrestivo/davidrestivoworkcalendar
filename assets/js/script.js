@@ -13,19 +13,18 @@ $(document).ready(function () {
   //  Checking the blocks and seeing if they are before the current timeTracker, currently the time or after the time and setting the appropriate class for each
 
     function currTime() {
-        var currentTIme = moment().hour();
+        var currentTime = moment().hour();
 
         $(".time-block").each(function () {
-            var Time = parseInt($(this).attr("id").split("hour")[1]);
+            var Time = parseInt($(this).attr("id").split("block")[1]);
 
-            if (Time < currentTIme) {
+            if (Time < currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
-
                
             }
-            else if (Time === currentTIme) {           
+            else if (Time === currentTime) {           
                 $(this).removeClass("past");
                 $(this).removeClass("future");
                 $(this).addClass("present");
@@ -34,27 +33,30 @@ $(document).ready(function () {
             else {
                 $(this).removeClass("present");
                 $(this).removeClass("past");
-                $(this).addClass("future");
-             
+                $(this).addClass("future");        
 
             }
         })
     }
 
+
+    
     // recalling the entered itemed from local storage after a refresh of the page before  a clear of local storage is made
 
-    $("#9am .description").val(localStorage.getItem("9am"));
-    $("#10am .description").val(localStorage.getItem("10am"));
-    $("#11am .description").val(localStorage.getItem("11am"));
-    $("#12pm .description").val(localStorage.getItem("12pm"));
-    $("#13pm .description").val(localStorage.getItem("13pm"));
-    $("#14pm .description").val(localStorage.getItem("14pm"));
-    $("#15pm .description").val(localStorage.getItem("15pm"));
-    $("#16pm .description").val(localStorage.getItem("16pm"));
-    $("#17pm .description").val(localStorage.getItem("17pm"));
+    $("#block9.description").val(localStorage.getItem("block9"));
+    $("#block10.description").val(localStorage.getItem("block10"));
+    $("#block11.description").val(localStorage.getItem("block11"));
+    $("#block12.description").val(localStorage.getItem("block12"));
+    $("#block13.description").val(localStorage.getItem("block13"));
+    $("#block14.description").val(localStorage.getItem("block14"));
+    $("#block15.description").val(localStorage.getItem("block15"));
+    $("#block16.description").val(localStorage.getItem("block16"));
+    $("#block17.description").val(localStorage.getItem("block17"));
 
     currTime();
+
 })
+
 
 // added a button to the page to clear the local storage and the time blocks
 function clearLocal() {
@@ -63,3 +65,12 @@ function clearLocal() {
   $(".description").val("");   
 
 }
+
+// $(document).ready(function SaveAllBlocks() {
+     
+//         var enteredTxt = $(this).siblings(".description").val();
+//         var blockSelected = $(this).parent().attr("id");
+       
+//         localStorage.setItem(blockSelected, enteredTxt);
+//     }
+// )
