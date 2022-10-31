@@ -26,6 +26,7 @@ textarea {
   background-color: #ffffff;
   border-radius: 15px;
   margin-bottom: 25px;
+  margin-left: 25px;
 }
 
 .description {
@@ -78,5 +79,6 @@ textarea {
 }
 
 .lastBlock {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  border-bottom: 5px solid black;
 }
