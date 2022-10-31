@@ -65,12 +65,3 @@ function clearLocal() {
   $(".description").val("");   
 
 }
-
-// $(document).ready(function SaveAllBlocks() {
-     
-//         var enteredTxt = $(this).siblings(".description").val();
-//         var blockSelected = $(this).parent().attr("id");
-       
-//         localStorage.setItem(blockSelected, enteredTxt);
-//     }
-// )
