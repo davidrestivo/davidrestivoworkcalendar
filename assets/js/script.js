@@ -19,11 +19,10 @@ $(document).ready(function () {
             var Time = parseInt($(this).attr("id").split("hour")[1]);
 
             if (Time < currentTIme) {
-                // $(this).removeClass("future");
+                $(this).removeClass("future");
                 $(this).removeClass("present");
                 $(this).addClass("past");
 
-                document.getElementById("future").style.display = "none";
                
             }
             else if (Time === currentTIme) {           
